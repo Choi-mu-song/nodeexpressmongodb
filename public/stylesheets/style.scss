@@ -1,0 +1,15 @@
+.time {
+  dl {
+	overflow: hidden;
+	margin-bottom: 10px;
+	dt, dd {
+	  float: left;
+	}
+	dt {
+	  margin-right: 10px;
+	}
+	dd {
+	  margin-right: 5px;
+	}
+  }
+}

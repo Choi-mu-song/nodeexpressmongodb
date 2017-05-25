@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% include inc/_header.ejs %>
+</head>
+<body>
+<div class="container">
+    <% include ./inc/_nav.ejs %>
+
+
+    <div class="show">
+
+        <section>
+            <div class="page-header">
+                <h1><%= data.title %></h1>
+            </div>
+            <div class="time">
+                <dl class="createdAt">
+                    <dt>작성일</dt>
+                    <dd><%= data.createdAt.toLocaleDateString() %></dd>
+                    <dd><%= data.createdAt.toLocaleTimeString() %></dd>
+                </dl>
+            </div>
+            <% if(data.updatedAt) { %>
+            <div class="time">
+                <dl class="updatedAt">
+                    <dt>수정정일</dt>
+                    <dd><%= data.updatedAt.toLocaleDateString() %></dd>
+                    <dd><%= data.updatedAt.toLocaleTimeString() %></dd>
+                </dl>
+            </div>
+            <% } %>
+
+            <div class="jumbotron">
+                <div>
+                    <p class="text-justify"><%= data.body %></p>
+                </div>
+            </div>
+
+            <div class="clearfix">
+                <form action="/board/<%= data._id %>?_method=delete" method="post">
+                    <div class="btn-group btn-group-sm pull-right">
+                        <a class="btn btn-primary" href="/board/<%= data._id %>/edit">Edit</a>
+                        <a class="btn btn-info" href="/board">List</a>
+                        <button class="btn btn-danger" type="submit">Delete</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+</div>
+<% include inc/_footer.ejs %>
+</body>
+</html>

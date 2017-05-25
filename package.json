@@ -1,0 +1,34 @@
+{
+  "name": "kindhtmlapp",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "async": "^2.4.0",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "~1.16.0",
+    "bootstrap": "^3.3.7",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.0",
+    "ejs": "~2.5.5",
+    "express": "~4.14.1",
+    "express-session": "^1.15.2",
+    "jquery": "^3.2.1",
+    "jsdom": "^9.12.0",
+    "method-override": "^2.3.8",
+    "mongo-express": "^0.40.0",
+    "mongoose": "^4.9.7",
+    "morgan": "~1.7.0",
+    "node-sass-middleware": "0.9.8",
+    "passport": "^0.3.2",
+    "passport-facebook": "^2.1.1",
+    "passport-google": "^0.3.0",
+    "passport-google-oauth": "^1.0.0",
+    "passport-local": "^1.0.0",
+    "passport-twitter": "^1.0.4",
+    "serve-favicon": "~2.3.2"
+  }
+}

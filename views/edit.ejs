@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% include inc/_header.ejs %>
+</head>
+<body>
+<div class="container">
+    <% include ./inc/_nav.ejs %>
+    <h1><%= title %></h1>
+
+    <div class="new">
+        <form action="/board/<%= data._id %>?_method=put" method="post">
+            <dl class="form-group">
+                <dt><label for="">title</label></dt>
+                <dd><input type="text" id="" class="form-control" name="post[title]" value="<%= data.title %>"></dd>
+                <dt><label for="">Content</label></dt>
+                <dd><textarea name="post[body]" class="form-control" rows="3"><%= data.body %></textarea></dd>
+            </dl>
+
+            <div class="clearfix">
+                <div class="btn-group btn-group-sm pull-right">
+                    <button class="btn btn-primary" type="submit">Modify</button>
+                    <a class="btn btn-info" href="/board/<%= data._id %>">Back</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<% include inc/_footer.ejs %>
+
+</body>
+</html>

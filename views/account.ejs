@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% include ./inc/_header.ejs %>
+</head>
+<body>
+
+<p>ID: <%= user.identifier %></p>
+<p>Name: <%= user.displayName %></p>
+<p>Email: <%= user.emails[0].value %></p>
+
+<% include ./inc/_footer.ejs %>
+</body>
+</html>
